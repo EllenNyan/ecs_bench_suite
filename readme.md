@@ -6,14 +6,14 @@ The full benchmark report is available [here](https://rust-gamedev.github.io/ecs
 
 |                  | legion (\*)           | legion 0.2.4 | bevy       | hecs    | shipyard (\*)         | specs       |
 |------------------|:---------------------:|:------------:|:----------:|:-------:|:---------------------:|:-----------:|
-| simple_insert    | **0.434ms**           | 1.06ms       | 0.865ms    | 0.645ms | 2.49ms                | 2.32ms      |
-| simple_iter      | **13.4us** (16.6us)   | **13.4us**   | **14.4us** | 26.7us  | 110us (45.6us)        | 34.3ms      |
-| frag_iter        | **0.509us**           | 1.78us       | 1.76us     | 1.79us  | 1.04us                | 1.67us      |
-| heavy_compute    | **0.701ms** (0.723ms) | 4.34ms       | 1.06ms     | 1.02ms  | 0.778ms (**0.700ms**) | 0.995ms     |
-| schedule         | **52.3us** (53.7us)   | 151us        | 94.9us     | -       | 580us (307us)         | 244us       |
-| add_remove       | 5.50ms                | 3.07ms       | -          | 18.2ms  | 2.90ms                | **0.148ms** |
-| serialize_text   | **17.9ms**            | -            | -          | -       | -                     | -           |
-| serialize_binary | **6.42ms**            | -            | -          | -       | -                     | -           |
+| simple_insert    | **239us**             | 0.968ms      | 1.0865ms   | 496us   | 1.7448ms              | 1.6462ms    |
+| simple_iter      | **12.206us** (12.32us)| **12.485us** | **14.27us**| 22.47us | **81.6us** (27.79us)  | 36.938us    |
+| frag_iter        | 418.5ns               | 2.28us       | 1.22us     | 1.59us  | **360ns**             | 1.85us      |
+| heavy_compute    | **0.596ms** (0.623ms) | 3.648ms      | 1.09ms     | 1.015ms | 0.632ms (0.603ms)     | 0.986ms     |
+| schedule         | **50.95us** (52.68us) | 190.7us      | 77.94us    | -       | 611us (224us)         | 228us       |
+| add_remove       | 3.20ms                | 2.54ms       | 4.77ms     | 3.57ms  | 268us                 | **112us**   |
+| serialize_text   | **12.248ms**          | -            | -          | -       | -                     | -           |
+| serialize_binary | **2.696ms**           | -            | -          | -       | -                     | -           |
 
 (*): The values in parentheses are results where per-benchmark storage optimizations were applied. Some of these are mutually exclusive, so with and without "packing" typically represent best and worst-case performance for the ECS.
 
