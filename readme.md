@@ -7,7 +7,7 @@ The full benchmark report is available [here](https://rust-gamedev.github.io/ecs
 |                  | legion (\*)           | legion 0.2.4 | bevy       | hecs    | shipyard (\*)         | specs       |
 |------------------|:---------------------:|:------------:|:----------:|:-------:|:---------------------:|:-----------:|
 | simple_insert    | **239us**             | 0.968ms      | 1.0865ms   | 496us   | 1.7448ms              | 1.6462ms    |
-| simple_iter      | **12.206us** (12.32us)| **12.485us** | **14.27us**| 22.47us | **81.6us** (27.79us)  | 36.938us    |
+| simple_iter      | **12.206us** (12.32us)| 12.485us     | 14.27us    | 22.47us | 81.6us (27.79us)      | 36.938us    |
 | frag_iter        | 418.5ns               | 2.28us       | 1.22us     | 1.59us  | **360ns**             | 1.85us      |
 | heavy_compute    | **0.596ms** (0.623ms) | 3.648ms      | 1.09ms     | 1.015ms | 0.632ms (0.603ms)     | 0.986ms     |
 | schedule         | **50.95us** (52.68us) | 190.7us      | 77.94us    | -       | 611us (224us)         | 228us       |
