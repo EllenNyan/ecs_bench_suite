@@ -1,10 +1,10 @@
-use bevy_ecs::prelude::*;
+use hecs::*;
 
 macro_rules! create_entities {
     ($world:ident; $( $variants:ident ),*) => {
         $(
             struct $variants(f32);
-            $world.spawn_batch((0..20).map(|_| ($variants(0.0), Data(1.0))));
+            $world.spawn_batch((0..200).map(|_| ($variants(0.0), Data(1.0))));
         )*
     };
 }
@@ -23,7 +23,7 @@ impl Benchmark {
     }
 
     pub fn run(&mut self) {
-        for mut data in self.0.query_mut::<&mut Data>().iter() {
+        for (_, mut data) in self.0.query::<&mut Data>().iter() {
             data.0 *= 2.0;
         }
     }

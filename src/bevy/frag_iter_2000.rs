@@ -4,7 +4,7 @@ macro_rules! create_entities {
     ($world:ident; $( $variants:ident ),*) => {
         $(
             struct $variants(f32);
-            $world.spawn_batch((0..20).map(|_| ($variants(0.0), Data(1.0))));
+            $world.spawn_batch((0..2000).map(|_| ($variants(0.0), Data(1.0))));
         )*
     };
 }
