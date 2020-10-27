@@ -1,3 +1,4 @@
+use ellecs::spawn;
 use ellecs::world::World;
 
 pub struct Data(f32);
@@ -10,7 +11,7 @@ macro_rules! setup {
 
         $(
             for _ in 0..20 {
-                $world.spawn(($x(0.), Data(1.)));
+                spawn!(&mut $world, $x(0.), Data(1.));
             }
         )*
     };

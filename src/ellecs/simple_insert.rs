@@ -1,4 +1,5 @@
 use cgmath::*;
+use ellecs::spawn;
 use ellecs::world::World;
 
 #[derive(Copy, Clone)]
@@ -21,12 +22,13 @@ impl Benchmark {
         let mut world = World::new();
 
         for _ in 0..10_000 {
-            world.spawn((
+            spawn!(
+                &mut world,
                 Transform(Matrix4::from_scale(1.0)),
                 Position(Vector3::unit_x()),
                 Rotation(Vector3::unit_x()),
                 Velocity(Vector3::unit_x()),
-            ));
+            );
         }
     }
 }

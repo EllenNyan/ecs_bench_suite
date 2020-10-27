@@ -19,7 +19,7 @@ macro_rules! setup {
         )*
 
         fn spawn_entity<T: Send + Sync + 'static>(world: &mut World, data: T) {
-            world.spawn((data, $($y(2.),)* Data(1.)));
+            world.spawn((data, Data(1.), $($y(2.),)*));
         }
     };
 }

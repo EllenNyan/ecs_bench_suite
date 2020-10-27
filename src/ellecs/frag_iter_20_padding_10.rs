@@ -2,6 +2,8 @@ use ellecs::world::World;
 
 pub struct Data(f32);
 
+use ellecs::spawn;
+
 macro_rules! setup {
         ($world:ident, (bloat: ($($y:ident,)*)), ($($x:ident),*)) => {
             $(
@@ -19,7 +21,7 @@ macro_rules! setup {
             )*
 
             fn spawn_entity<T: 'static>(world: &mut World, data: T) {
-                world.spawn((data, $($y(2.),)* Data(1.)));
+                spawn!(&mut world, data, $($y(2.),)* Data(1.));
             }
         };
     }

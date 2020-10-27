@@ -1,0 +1,65 @@
+
+simple_insert/ellecs    time:   [1.1270 ms 1.1422 ms 1.1578 ms]
+simple_insert/legion    time:   [203.64 us 205.35 us 207.35 us]
+simple_insert/bevy      time:   [736.60 us 746.79 us 757.25 us]
+simple_insert/hecs      time:   [681.40 us 689.30 us 697.39 us]
+simple_insert/shipyard  time:   [656.76 us 666.43 us 676.77 us]
+
+simple_iter/ellecs      time:   [12.869 us 12.953 us 13.030 us]
+simple_iter/legion      time:   [12.370 us 12.485 us 12.612 us]
+simple_iter/bevy        time:   [18.795 us 19.073 us 19.413 us]
+simple_iter/hecs        time:   [18.812 us 18.958 us 19.138 us]
+simple_iter/shipyard (packed)
+                        time:   [24.493 us 25.036 us 25.514 us]
+
+fragmented_iter_20/ellecs
+                        time:   [394.50 ns 397.52 ns 400.91 ns]
+fragmented_iter_20/legion
+                        time:   [276.74 ns 278.31 ns 280.05 ns]
+fragmented_iter_20/bevy time:   [958.21 ns 979.09 ns 1.0024 us]
+fragmented_iter_20/hecs time:   [1.6197 us 1.6298 us 1.6416 us]
+fragmented_iter_20/shipyard
+                        time:   [479.51 ns 481.95 ns 484.79 ns]
+
+frag_iter_20_padding_20/ellecs
+                        time:   [652.01 ns 660.03 ns 668.66 ns]
+frag_iter_20_padding_20/legion
+                        time:   [258.29 ns 258.81 ns 259.37 ns]
+frag_iter_20_padding_20/bevy
+                        time:   [1.2233 us 1.2321 us 1.2424 us]
+frag_iter_20_padding_20/hecs
+                        time:   [1.5693 us 1.5782 us 1.5895 us]
+
+fragmented_iter_200/ellecs
+                        time:   [1.0786 us 1.0926 us 1.1104 us]
+fragmented_iter_200/legion
+                        time:   [714.04 ns 718.73 ns 724.54 ns]
+fragmented_iter_200/bevy
+                        time:   [6.0834 us 6.1009 us 6.1256 us]
+fragmented_iter_200/hecs
+                        time:   [11.539 us 11.577 us 11.633 us]
+fragmented_iter_200/shipyard
+                        time:   [2.9932 us 3.0593 us 3.1420 us]
+
+fragmented_iter_2000/ellecs
+                        time:   [5.0888 us 5.1574 us 5.2367 us]
+fragmented_iter_2000/legion
+                        time:   [5.0561 us 5.1340 us 5.2122 us]
+fragmented_iter_2000/bevy
+                        time:   [61.276 us 61.536 us 61.802 us]
+fragmented_iter_2000/hecs
+                        time:   [108.64 us 109.09 us 109.47 us]
+fragmented_iter_2000/shipyard
+                        time:   [28.951 us 29.495 us 30.128 us]
+
+add_remove_component/ellecs
+                        time:   [2.4959 ms 2.5205 ms 2.5516 ms]
+add_remove_component/legion
+                        time:   [2.8446 ms 2.8817 ms 2.9248 ms]
+add_remove_component/hecs
+                        time:   [3.2410 ms 3.2741 ms 3.3187 ms]
+add_remove_component/shipyard
+                        time:   [149.27 us 151.26 us 153.49 us]
+add_remove_component/bevy
+                        time:   [4.1191 ms 4.1497 ms 4.1823 ms]
+

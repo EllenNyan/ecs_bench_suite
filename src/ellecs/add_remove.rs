@@ -1,11 +1,11 @@
 use ellecs::entities::Entity;
+use ellecs::spawn;
 use ellecs::world::World;
 
 #[derive(Copy, Clone)]
 struct A(f32);
 #[derive(Copy, Clone)]
 struct B(f32);
-
 pub struct Benchmark(World, Box<[Entity]>);
 
 impl Benchmark {
@@ -14,7 +14,7 @@ impl Benchmark {
         let mut entities = Vec::with_capacity(10000);
 
         for _ in 0..10_000 {
-            entities.push(world.spawn((A(1.),)));
+            entities.push(spawn!(&mut world, A(1.)));
         }
 
         Benchmark(world, entities.into_boxed_slice())
