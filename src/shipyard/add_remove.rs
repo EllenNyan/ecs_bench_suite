@@ -24,7 +24,7 @@ impl Benchmark {
     pub fn run(&mut self) {
         self.0.run(|entities: EntitiesViewMut, mut b: ViewMut<B>| {
             for entity in &self.1 {
-                entities.add_component(&mut b, B(0.0), *entity);
+                entities.add_component(*entity, &mut b, B(0.0));
             }
         });
 

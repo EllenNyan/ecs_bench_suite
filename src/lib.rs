@@ -3,4 +3,5 @@
 pub mod bevy;
 pub mod ellecs;
 pub mod hecs;
+pub mod shipyard;
 pub mod specs;

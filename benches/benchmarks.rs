@@ -103,6 +103,10 @@ fn bench_add_remove(c: &mut Criterion) {
         let mut bench = ellecs::add_remove::Benchmark::new();
         b.iter(move || bench.run());
     });
+    group.bench_function("shipyard", |b| {
+        let mut bench = shipyard::add_remove::Benchmark::new();
+        b.iter(move || bench.run());
+    });
     group.bench_function("hecs", |b| {
         let mut bench = hecs::add_remove::Benchmark::new();
         b.iter(move || bench.run());

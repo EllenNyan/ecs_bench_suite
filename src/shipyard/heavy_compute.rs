@@ -50,7 +50,7 @@ impl Benchmark {
             |mut positions: ViewMut<Position>, mut transforms: ViewMut<Matrix4<f32>>| {
                 (&mut positions, &mut transforms)
                     .par_iter()
-                    .for_each(|(pos, mat)| {
+                    .for_each(|(mut pos, mut mat)| {
                         for _ in 0..100 {
                             *mat = mat.invert().unwrap();
                         }
